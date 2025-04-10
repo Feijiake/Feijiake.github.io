@@ -412,24 +412,25 @@
                     <div class="trm-divider footer-divider"></div>
 
                     <!-- footer -->
-                    <div class="trm-counter-up trm-scroll-animation">
+                    <div class="trm-counter-up trm-scroll-animation" style="text-align: center;">
   <div class="trm-counter-number">
     <span id="days-counter" class="trm-counter"></span>
     <span class="trm-counter-symbol">+</span>
   </div>
   <div class="trm-divider trm-mb-20 trm-mt-20"></div>
-  <div class="trm-label">Honors and Awards</div>
+  <div class="trm-label" id="love-text">We've been in love for XX days.</div>
 </div>
 
 <script>
   // 计算天数
-  const startDate = new Date('2022-10-29');
-  const today = new Date();
-  const diffTime = today - startDate;
+  const startDate = new Date('2022-10-29'); // 起始日期
+  const today = new Date(); // 当前日期
+  const diffTime = today - startDate; // 时间差（毫秒）
   const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24)); // 转换为天数
 
-  // 插入到 HTML 中
+  // 将天数插入到 HTML 中
   document.getElementById('days-counter').textContent = diffDays;
+  document.getElementById('love-text').textContent = `We've been in love for ${diffDays} days.`;
 </script>
                     <!-- footer end -->
 
